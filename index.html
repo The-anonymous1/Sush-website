@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Do you love me sush don &#128150;?<br>
+                (try to say no huhh )</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/SvvfK2dco188Wk4ZTq/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class="gif_container2">
+                <img src="https://media.giphy.com/media/gCxd0kUSR6I9dflWgm/giphy.gif" alt="hearts">
+            </div>
+            <div class="gif_container3">
+                <img src="https://media.giphy.com/media/gCxd0kUSR6I9dflWgm/giphy.gif" alt="hearts">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 65;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
